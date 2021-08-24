@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producers List</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>First_name</th>
+        <th>Last_name</th>
+        <th>Age</th>
+        <th>Phone_number</th>
+        <th>Email</th>
+        <th>id_number</th>
+        <th>gender</th>
+        <th>farm_number</th>
+        <th>farm_title_deed</th>
+        <th>products</th>
+        <th>region</th>
+      </tr>
+      {%for producer in producers%}
+      <tr>
+        <td>{{producer.first_name}}</td>
+        <td>{{producer.last_name}}</td>
+        <td>{{producer.age}}</td>
+        <td>{{producer.phone_number}}</td>
+        <td>{{producer.email}}</td>
+        <td>{{producer.id_number}}</td>
+        <td>{{producer.gender}}</td>
+        <td>{{producer.farm_number}}</td>
+        <td>{{producer.farm_title_deed}}</td>
+        <td>{{producer.products}}</td>
+        <td>{{producer.region}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>

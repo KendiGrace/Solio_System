@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer registration form</title>
+</head>
+<body>
+
+<style>
+    img {
+        width: 300px;
+        height: 100px;
+        margin-left: 100px;
+      }
+    .container {
+        border-radius: 25px;
+        max-width: 500px;
+        background-color: white;
+        margin: 20px auto;
+        padding: 30px;
+      }
+    
+    .container.form.inputted {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    input {
+        width: 100%;
+        outline: none;
+        font-size: 15px;
+        padding: 8px 8px;
+        border: 1px solid;
+        border-color: purple;
+        font-size: 15px;
+        border-radius: 8px;
+        background-color: transparent;
+    }
+    label {
+        color: black;
+        font-weight: bolder;
+        align-items: left;
+        font-size: 15px;
+    }
+  
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 20px;
+    }
+    body {
+        background-color: rgb(213, 198, 213);
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: rgb(22, 19, 19);
+    }
+    .button {
+        width: 100px;
+        padding: 8px;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-style: solid;
+        border-radius: 25px;
+        border-color: white;
+        background-color: purple;
+        font-weight: bolder;
+      }
+      .button:hover {
+        color: white;
+        background-color:black;
+        border-color: white;
+      }
+      select {
+        width: 103%;
+        background-color: transparent;
+        padding: 8px 8px;
+        border: 1px solid;
+        font-size: 15px;
+        border-color: purple;
+        border-radius: 8px;
+        outline: none;
+      }
+</style>
+
+    <div class="container">
+    <div class="form">
+    <h1>Customer Registration Form</h1>
+    <form class="register" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">submit</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>

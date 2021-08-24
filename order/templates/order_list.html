@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers List</title>
+  </head>
+  <body>
+    <style>
+      #table {
+        width: 100%;
+      }
+      #table td,
+      #table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      #table tr:hover {
+        background-color: #ddd;
+      }
+      #table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: purple;
+        color: white;
+        font-family: sans-serif;
+      }
+    </style>
+    <table id="table">
+      <tr>
+        <th>ID</th>
+        <th>Client</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Cost</th>
+      </tr>
+      {%for order in orders%}
+      <tr>
+        <td>{{order.order_id}}</td>
+        <td>{{order.order_client}}</td>
+        <td>{{order.order_location}}</td>
+        <td>{{order.order_date}}</td>
+        <td>{{order.order_cost}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>

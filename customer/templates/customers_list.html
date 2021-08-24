@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers List</title>
+  </head>
+  <body>
+    <style>
+      #table {
+        width: 100%;
+      }
+      #table td,
+      #table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      #table tr:hover {
+        background-color: #ddd;
+      }
+      #table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: purple;
+        color: white;
+        font-family: sans-serif;
+      }
+    </style>
+    <table id="table">
+      <tr>
+        <th>First_name</th>
+        <th>Last_name</th>
+        <th>Date_of_Birth</th>
+        <th>Phone_number</th>
+        <th>id_number</th>
+        <th>Email</th>
+        <th>Image</th>
+        <th>Location</th>
+        <th>Gender</th>
+        <th>Profession</th>
+      </tr>
+      {%for customer in producers%}
+      <tr>
+        <td>{{customer.first_name}}</td>
+        <td>{{customer.last_name}}</td>
+        <td>{{customer.date_of_birth}}</td>
+        <td>{{customer.phone_number}}</td>
+        <td>{{customer.id_number}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.image}}</td>
+        <td>{{customer.location}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.profession}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>
